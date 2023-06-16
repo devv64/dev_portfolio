@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './HomePage.css';
-import ParticleEffect from './ParticleEffect';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  onClickViewPortfolio: () => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ onClickViewPortfolio }) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const handleViewPortfolio = () => {
+    onClickViewPortfolio();
+    buttonRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="border-blue-500 border-2 homepage-section">
-      <div className="border-black border-2 homepage-container">
-        <div className="border-black border-2 homepage-content">
-          <h1 className="homepage-title">Welcome to My Portfolio</h1>
+    <section className="homepage-section">
+      <div className="homepage-container">
+        <div className="homepage-content">
+          <h1 className="homepage-title">Dev Patel</h1>
           <p className="homepage-description">I'm a passionate developer ready to take on new challenges and create amazing web experiences.</p>
-          <button className="homepage-button">View Portfolio</button>
-        </div>
-        <div className='particle-constraint'>
-          <ParticleEffect />
+          <button ref={buttonRef} className="homepage-button" onClick={handleViewPortfolio}>
+            View Portfolio
+          </button>
         </div>
       </div>
     </section>

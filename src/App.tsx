@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import PortfolioCard from './components/PortfolioCard';
 import HomePage from './components/HomePage';
@@ -9,6 +9,13 @@ const App: React.FC = () => {
     { title: 'About', url: '/about' },
     { title: 'Contact', url: '/contact' },
   ];
+
+  const handleViewPortfolio = () => {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   // Define your portfolio items
   const portfolioItems = [
@@ -30,16 +37,13 @@ const App: React.FC = () => {
       rowSpan: 2,
       link: 'https://www.github.com/devv64',
     },
-    // Add more portfolio items as needed
   ];
 
   return (
     <div>
       <Navbar title="DP" links={links} />
-      {/* <div className="my-20"></div> This is just for spacing */}
-      <HomePage />
-      <PortfolioCard items={portfolioItems} />
-      <PortfolioCard items={portfolioItems} />
+      <HomePage onClickViewPortfolio={handleViewPortfolio} />
+      {<PortfolioCard items={portfolioItems} />}
     </div>
   );
 };

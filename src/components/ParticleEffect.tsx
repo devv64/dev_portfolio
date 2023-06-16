@@ -19,14 +19,14 @@ const ParticleEffect: React.FC = () => {
 
   const createParticles = (event: MouseEvent) => {
     const particleCount = 30;
-
+  
     const container = containerRef.current;
     if (!container) return;
-
+  
     const containerRect = container.getBoundingClientRect();
     const containerOffsetX = containerRect.left;
     const containerOffsetY = containerRect.top;
-
+  
     const randColor = getRandomColor();
     for (let i = 0; i < particleCount; i++) {
       const particleSize = Math.random() * 25 + 25;
@@ -34,22 +34,28 @@ const ParticleEffect: React.FC = () => {
       const distance = Math.random() * 50 + 0;
       const targetX = event.clientX + Math.cos(angle) * distance;
       const targetY = event.clientY + Math.sin(angle) * distance;
-
+  
       const particle: Particle = {
         left: `${event.clientX - 435}px`,
         top: `${event.clientY - 265}px`,
         width: `${particleSize}px`,
         height: `${particleSize}px`,
         backgroundColor: randColor,
-        targetX: `${targetX-event.clientX}px`,
-        targetY: `${targetY-event.clientY}px`,
+        targetX: `${targetX - event.clientX}px`,
+        targetY: `${targetY - event.clientY}px`,
         animationDuration: `${Math.random() * 2 + 0.5}s`,
         zIndex: 0,
       };
-
+  
       setParticles((prevParticles) => [...prevParticles, particle]);
+  
+      // Remove the particle after the animation duration
+      setTimeout(() => {
+        setParticles((prevParticles) => prevParticles.filter((p) => p !== particle));
+      }, parseFloat(particle.animationDuration) * 2000);
     }
   };
+  
 
   const getRandomColor = () => {
     const red = Math.floor(Math.random() * 256);

@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
 
   return (
     <div id="container" ref={containerRef}>
-      <nav className="fixed top-0 left-0 right-0 bg-gray-800 p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r hover:bg-gradient-to-l from-violet-500 to-fuchsia-500 p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg">
         <a
           href="/"
           className="rounded-lg bg-indigo-500 px-4 py-2 transition-all duration-300 hover:bg-indigo-300 hover:scale-105 cursor-pointer"
