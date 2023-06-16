@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import PortfolioCard from './components/PortfolioCard';
 import HomePage from './components/HomePage';
+import PortfolioPage from './components/PortfolioPage';
 
 const App: React.FC = () => {
   const links = [
@@ -23,7 +24,7 @@ const App: React.FC = () => {
       title: 'Project 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
-      tag: 'React',
+      tag: 'Flask',
       colSpan: 3,
       rowSpan: 1,
       link: 'http://devv64.pythonanywhere.com/',
@@ -32,18 +33,20 @@ const App: React.FC = () => {
       title: 'Project 2',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
       imageUrl: 'https://media.graphassets.com/9kTzcfcVQqILlQwqOoPg',
-      tag: 'Vue',
+      tag: 'React',
       colSpan: 2,
       rowSpan: 2,
-      link: 'https://www.github.com/devv64',
+      link: 'https://devsblogsite.vercel.app/',
     },
   ];
 
   return (
     <div>
-      <Navbar title="DP" links={links} />
+      <Navbar title="dp" links={links} />
       <HomePage onClickViewPortfolio={handleViewPortfolio} />
-      {<PortfolioCard items={portfolioItems} />}
+      <div className="h-96"></div>
+      <PortfolioCard items={portfolioItems} />
+      <PortfolioPage />
     </div>
   );
 };

@@ -8,7 +8,7 @@ const PortfolioPage: React.FC = () => {
       title: 'Project 1',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
-      tag: 'React',
+      tag: 'Flask',
       colSpan: 3,
       rowSpan: 1,
       link: 'http://devv64.pythonanywhere.com/',
@@ -17,10 +17,10 @@ const PortfolioPage: React.FC = () => {
       title: 'Project 2',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
       imageUrl: 'https://media.graphassets.com/9kTzcfcVQqILlQwqOoPg',
-      tag: 'Vue',
+      tag: 'React',
       colSpan: 2,
       rowSpan: 2,
-      link: 'https://www.github.com/devv64',
+      link: 'https://devsblogsite.vercel.app/',
     },
     // Add more portfolio items as needed
   ];
