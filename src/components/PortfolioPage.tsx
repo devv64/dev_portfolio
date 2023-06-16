@@ -1,15 +1,7 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import PortfolioCard from './components/PortfolioCard';
-import HomePage from './components/HomePage';
+import PortfolioCard from './PortfolioCard';
 
-const App: React.FC = () => {
-  const links = [
-    { title: 'Home', url: '/' },
-    { title: 'About', url: '/about' },
-    { title: 'Contact', url: '/contact' },
-  ];
-
+const PortfolioPage: React.FC = () => {
   // Define your portfolio items
   const portfolioItems = [
     {
@@ -35,13 +27,10 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Navbar title="DP" links={links} />
-      {/* <div className="my-20"></div> This is just for spacing */}
-      <HomePage />
-      <PortfolioCard items={portfolioItems} />
+      <h1>Portfolio Page</h1>
       <PortfolioCard items={portfolioItems} />
     </div>
   );
 };
 
-export default App;
+export default PortfolioPage;
