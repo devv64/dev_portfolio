@@ -1,0 +1,3 @@
+--> color theme changes when scrolling into a new section 
+    --> ie: when scrolling into the "portfolio" section, the color theme changes to a red color
+    --> ex: https://unicorn-utterances.com/collections/framework-field-guide

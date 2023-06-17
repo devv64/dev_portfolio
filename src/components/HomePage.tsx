@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import './HomePage.css';
 
 interface HomePageProps {
-  onClickViewPortfolio: () => void;
+  portfolioRef: React.RefObject<HTMLDivElement>;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ onClickViewPortfolio }) => {
+const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
@@ -31,9 +31,11 @@ const HomePage: React.FC<HomePageProps> = ({ onClickViewPortfolio }) => {
     type();
   }, []);
 
-  const handleViewPortfolio = () => {
-    onClickViewPortfolio();
-    buttonRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const scrollDown = () => {
+    window.scrollTo({ 
+      top: portfolioRef.current?.offsetTop, 
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -44,7 +46,7 @@ const HomePage: React.FC<HomePageProps> = ({ onClickViewPortfolio }) => {
           <p className="homepage-description">
             I'm a passionate developer ready to take on new challenges and create amazing web experiences.
           </p>
-          <button ref={buttonRef} className="homepage-button" onClick={handleViewPortfolio}>
+          <button ref={buttonRef} className="homepage-button" onClick={scrollDown}>
             View Portfolio
           </button>
         </div>

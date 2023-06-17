@@ -48,32 +48,32 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
 
   return (
     <div id="container" ref={containerRef}>
-      <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r hover:bg-gradient-to-l from-violet-500 to-fuchsia-500 p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 bg-[#00A6FB] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg">
         <a
           href="/"
-          className="rounded-lg bg-indigo-500 px-4 py-2 transition-all duration-300 hover:bg-indigo-300 hover:scale-105 cursor-pointer"
+          className="rounded-lg bg-[#001427] px-4 py-2 transition-all duration-300 hover:bg-[#0054A2] hover:scale-105 cursor-pointer"
         >
-          <div className="text-gray-800 text-xl">{title}</div>
+          <div className="text-[#DBDFAC] text-xl">{title}</div>
         </a>
         <div className="relative">
           <button
-            className="bg-indigo-500 text-white py-2 px-3 rounded-full focus:outline-none flex items-center transition-all duration-300 hover:bg-indigo-300 hover:scale-105"
+            className="bg-[#001427] text-white py-2 px-3 rounded-full focus:outline-none flex items-center transition-all duration-300 hover:bg-[#0054A2] hover:scale-110"
             onClick={toggleMenu}
           >
             <HiMenuAlt3 className="text-xl" />
           </button>
           {menuOpen && (
             <ul
-              className="absolute right-0 mt-2 bg-white shadow rounded"
+              className="absolute right-0 mt-2 bg-[#fcffde] shadow rounded"
               ref={menuRef}
             >
               {links.map((link, index) => (
                 <li key={index}>
                   <a
-                    className="px-4 py-2 block hover:bg-indigo-500 rounded"
+                    className="px-4 py-2 block hover:bg-[#0054A2] rounded"
                     href={link.url}
                   >
-                    <span className="text-gray-800">{link.title}</span>
+                    <span className="text-[#001427]">{link.title}</span>
                   </a>
                 </li>
               ))}

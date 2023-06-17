@@ -1,5 +1,5 @@
 .homepage-section {
-    background-color: #dcc1ff;
+    background-color: #001427;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -23,37 +23,37 @@
     position: relative;
     z-index: 2;
   }
-  
+
   .homepage-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #333;
+    color: #DBDFAC;
     margin-bottom: 2rem;
   }
   
   .homepage-description {
     font-size: 1.5rem;
-    color: #666;
+    color: #DBDFAC;
     margin-bottom: 2.5rem;
   }
   
   .homepage-button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #00A6FB;
+    color: #000e1c;
     font-size: 1.2rem;
     padding: 1rem 2.5rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .homepage-button:hover {
-    background-color: #0056b3;
+    background-color: #0054A2;
+    scale: 105%;
   }
   
   .homepage-image {
-    /* background-image: url('path/to/your/image.jpg'); */
     background-size: cover;
     background-position: center;
     width: 100%;
