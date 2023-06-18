@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { HiMenuAlt3 } from 'react-icons/hi';
-import './Navbar.css';
 
 interface Link {
   title: string;
@@ -10,9 +9,10 @@ interface Link {
 interface NavbarProps {
   title: string;
   links: Link[];
+  theme: string[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
+const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
 
   return (
     <div id="container" ref={containerRef}>
-      <nav className="fixed top-0 left-0 right-0 bg-[#00A6FB] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg">
+      <nav className={`fixed top-0 left-0 right-0 bg-[${theme[0]}] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg`}>
         <a
           href="/"
           className="rounded-lg bg-[#001427] px-4 py-2 transition-all duration-300 hover:bg-[#0054A2] hover:scale-105 cursor-pointer"

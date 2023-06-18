@@ -1,3 +1,10 @@
---> color theme changes when scrolling into a new section 
+--> color theme changes when scrolling into a new section
+    --> thought: try to make a smoother transition
+        --> idea: use fast gradient to ease the transition
     --> ie: when scrolling into the "portfolio" section, the color theme changes to a red color
     --> ex: https://unicorn-utterances.com/collections/framework-field-guide
+
+--> sticky scrolling ?
+    --> ex: https://webflow.com/made-in-webflow/website/Starry-Skies-Sticky-Horizontal-Scroll-Demo
+    --> thought: could work well with the color theme change when scrolling into a new section
+                 and allow for better transitions between sections
