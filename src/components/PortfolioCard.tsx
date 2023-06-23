@@ -52,12 +52,11 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ items }) => {
                   <div className="text-center p-4">
                     <h3 className="text-2xl font-semibold text-white mb-2">{item.title}</h3>
                     <p className="text-gray-200">{item.description}</p>
-                    <a
-                      href={item.link}
+                    <div
                       className="mt-4 inline-flex items-center text-white font-semibold hover:text-[#00A6FB] transition-colors duration-200"
                     >
                       View More <IoMdArrowDropright className="ml-1" />
-                    </a>
+                    </div>
                   </div>
                 </a>
               </div>

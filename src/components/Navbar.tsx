@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (event: React.MouseEvent) => {
-    event.stopPropagation(); // Prevent event propagation to the window
+    event.stopPropagation(); 
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
           </button>
           {menuOpen && (
             <ul
-              className="absolute right-0 mt-2 bg-[#fcffde] shadow rounded"
+              className={`absolute right-0 mt-2 bg-[${theme[3]}] shadow rounded`}
               ref={menuRef}
             >
               {links.map((link, index) => (
