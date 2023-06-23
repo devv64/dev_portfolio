@@ -43,7 +43,7 @@ const App: React.FC = () => {
       <div id='portfolio-page'ref={ref}>
         <PortfolioPage />
       </div>
-      <About />
+      {/* <About /> */}
     </div>
   );
 };
