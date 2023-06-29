@@ -4,7 +4,25 @@
     --> ie: when scrolling into the "portfolio" section, the color theme changes to a red color
     --> ex: https://unicorn-utterances.com/collections/framework-field-guide
 
+    * Not working well. Having issues with transparancy
+
+--> use a horizontal scroll for the portfolio section ?
+
 --> sticky scrolling ?
     --> ex: https://webflow.com/made-in-webflow/website/Starry-Skies-Sticky-Horizontal-Scroll-Demo
     --> thought: could work well with the color theme change when scrolling into a new section
                  and allow for better transitions between sections
+
+
+
+portfolio projects:
+    --> SG Headless CMS
+    --> Dev's Blog Site
+    --> SplitIt
+    --> weatherApp
+    --> ShuPU
+    --> All Star Site (while necessary)
+    --> WiseQuackers
+    --> InternTrack (in progress)
+    --> Maybe tiling the courtyard with video demo
+    
