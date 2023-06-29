@@ -9,10 +9,9 @@ interface Link {
 interface NavbarProps {
   title: string;
   links: Link[];
-  theme: string[];
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
+const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,12 +47,12 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
 
   return (
     <div id="container" ref={containerRef}>
-      <nav className={`fixed top-0 left-0 right-0 bg-[${theme[0]}] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg z-50`}>
+      <nav className="fixed top-0 left-0 right-0 bg-[#00A6FB] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg z-50">
         <a
           href="/"
-          className={`rounded-lg bg-[${theme[1]}] px-4 py-2 transition-all duration-300 hover:bg-[${theme[2]}] hover:scale-105 cursor-pointer`}
+          className="rounded-lg bg-[#001427] px-4 py-2 transition-all duration-300 hover:bg-[#0054A2] hover:scale-105 cursor-pointer"
         >
-          <div className={`text-[${theme[3]}] text-xl`}>{title}</div>
+          <div className="text-[#DBDFAC] text-xl">{title}</div>
         </a>
         <div className="relative">
           <button
@@ -64,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links, theme }) => {
           </button>
           {menuOpen && (
             <ul
-              className={`absolute right-0 mt-2 bg-[${theme[3]}] shadow rounded`}
+              className="absolute right-0 mt-2 bg-[#DBDFAC] shadow rounded"
               ref={menuRef}
             >
               {links.map((link, index) => (
