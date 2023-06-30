@@ -99,7 +99,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ items }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
-                    className="h-[22rem] w-full object-cover rounded-lg"
+                    className="h-[18rem] w-full object-cover rounded-lg"
                   />
                   <div className="absolute top-0 left-0 p-2">
                     <h3 className="text-sm ml-1">{item.title}</h3>

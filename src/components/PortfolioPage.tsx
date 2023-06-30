@@ -4,6 +4,7 @@ import CMS from '../assets/CMS.png'
 import meek from '../assets/meek.mp4'
 import blog from '../assets/blog.jpg'
 import splitit from '../assets/splitit.png'
+import stevensCampus from '../assets/stevensCampus.png'
 
 // const PortfolioPage: React.FC = () => {
 const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
@@ -36,12 +37,12 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       videoUrl: '',
     },
     {
-      title: 'Project 1',
-      shortdesc: 'A blog site built with Next.js and Tailwind CSS',
+      title: 'WiseQuackers',
+      shortdesc: '',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
+      imageUrl: stevensCampus,
       tag: 'Flask',
-      link: 'http://devv64.pythonanywhere.com/',
+      link: 'https://wisequackers.wisequackers.repl.co/',
       videoUrl: '',
     },
     {
