@@ -5,6 +5,7 @@ import meek from '../assets/meek.mp4'
 import blog from '../assets/blog.jpg'
 import splitit from '../assets/splitit.png'
 import stevensCampus from '../assets/stevensCampus.png'
+import ShuPU from '../assets/ShuPU.png'
 
 // const PortfolioPage: React.FC = () => {
 const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
@@ -21,7 +22,7 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
     {
       title: 'Dev\'s Blog Site',
       shortdesc: 'A blog site built with Next.js and Tailwind CSS',
-      description: 'Blogsite is a dynamic website built with React, Next.js, GraphQL, and Tailwind CSS. It offers a seamless browsing experience and utilizes GraphQL for efficient storage of blog posts and comments. Explore a collection of engaging articles and interact with the content effortlessly.',
+      description: 'My blogsite is a dynamic website built with React, Next.js, GraphQL, and Tailwind CSS. It offers a seamless browsing experience and utilizes GraphQL for efficient storage of blog posts and comments. Explore a collection of engaging articles and interact with the content effortlessly.',
       imageUrl: blog,
       tag: 'React',
       link: 'https://devsblogsite.vercel.app/',
@@ -46,12 +47,12 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       videoUrl: '',
     },
     {
-      title: 'Project 1',
-      shortdesc: 'A blog site built with Next.js and Tailwind CSS',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
-      tag: 'Flask',
-      link: 'http://devv64.pythonanywhere.com/',
+      title: 'ShuPU',
+      shortdesc: 'A programming language and CPU architecture built with Python and Logisim',
+      description: 'Here you\'ll discover my involvement in the fascinating ShuPU project. As part of the team, I played a pivotal role in developing the Shu++ programming language and its accompanying CPU architecture. Shu++ offers an exciting programming experience, allowing users to write code that can be assembled into binary machine code. With a focus on simplicity and efficiency, the CPU architecture features four versatile general-purpose registers, instruction memory, and data memory. This enables seamless data loading, storage, and various computations. Throughout the project, we encountered challenges such as designing optimal component layouts, tackling intricate binary encoding puzzles, and conducting rigorous testing. Despite the obstacles, we persevered and created a user-friendly manual to guide you through the ShuPU experience.',
+      imageUrl: ShuPU,
+      tag: 'Logisim',
+      link: 'https://github.com/devv64/ShuPU/tree/main',
       videoUrl: '',
     },
     {
