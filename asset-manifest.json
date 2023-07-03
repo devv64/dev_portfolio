@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b06dfe0.css",
-    "main.js": "/static/js/main.be04d011.js",
-    "static/media/CMS.png": "/static/media/CMS.1f42330077a735a13f00.png",
-    "static/media/stevensCampus.png": "/static/media/stevensCampus.604af85f100c90d2d281.png",
-    "static/media/ShuPU.png": "/static/media/ShuPU.70701799b25d3c7fabe4.png",
-    "static/media/blog.jpg": "/static/media/blog.d941a66ec76af799ee3c.jpg",
-    "static/media/liquorBG.jpg": "/static/media/liquorBG.db48ac5f278ca1d64cfd.jpg",
-    "static/media/Quicksand-Bold.ttf": "/static/media/Quicksand-Bold.a0a11318dd0b528da77d.ttf",
-    "static/media/splitit.png": "/static/media/splitit.1b01f88101167175e610.png",
-    "index.html": "/index.html",
-    "main.9b06dfe0.css.map": "/static/css/main.9b06dfe0.css.map",
-    "main.be04d011.js.map": "/static/js/main.be04d011.js.map"
+    "main.css": "/dev_portfolio/static/css/main.74cd8005.css",
+    "main.js": "/dev_portfolio/static/js/main.e5dd27e8.js",
+    "static/media/CMS.png": "/dev_portfolio/static/media/CMS.1f42330077a735a13f00.png",
+    "static/media/stevensCampus.png": "/dev_portfolio/static/media/stevensCampus.604af85f100c90d2d281.png",
+    "static/media/ShuPU.png": "/dev_portfolio/static/media/ShuPU.70701799b25d3c7fabe4.png",
+    "static/media/blog.jpg": "/dev_portfolio/static/media/blog.d941a66ec76af799ee3c.jpg",
+    "static/media/liquorBG.jpg": "/dev_portfolio/static/media/liquorBG.db48ac5f278ca1d64cfd.jpg",
+    "static/media/Quicksand-Bold.ttf": "/dev_portfolio/static/media/Quicksand-Bold.a0a11318dd0b528da77d.ttf",
+    "static/media/splitit.png": "/dev_portfolio/static/media/splitit.1b01f88101167175e610.png",
+    "index.html": "/dev_portfolio/index.html",
+    "main.74cd8005.css.map": "/dev_portfolio/static/css/main.74cd8005.css.map",
+    "main.e5dd27e8.js.map": "/dev_portfolio/static/js/main.e5dd27e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b06dfe0.css",
-    "static/js/main.be04d011.js"
+    "static/css/main.74cd8005.css",
+    "static/js/main.e5dd27e8.js"
   ]
 }
