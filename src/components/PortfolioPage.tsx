@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
 import PortfolioCard from './PortfolioCard';
 import CMS from '../assets/CMS.png'
-import meek from '../assets/meek.mp4'
 import blog from '../assets/blog.jpg'
 import splitit from '../assets/splitit.png'
 import stevensCampus from '../assets/stevensCampus.png'
 import ShuPU from '../assets/ShuPU.png'
+import liquorBG from '../assets/liquorBG.jpg'
 
 // const PortfolioPage: React.FC = () => {
 const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
@@ -56,21 +56,21 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       videoUrl: '',
     },
     {
-      title: 'Project 1',
+      title: 'Weather App',
       shortdesc: 'A blog site built with Next.js and Tailwind CSS',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
+      imageUrl: 'https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=f3503a7856c58c20acab4eae8bb1f0f4',
       tag: 'Flask',
-      link: 'http://devv64.pythonanywhere.com/',
+      link: 'https://devv64.github.io/weatherApp2/',
       videoUrl: '',
     },
     {
-      title: 'Project 1',
+      title: 'All Star Site',
       shortdesc: 'A blog site built with Next.js and Tailwind CSS',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imageUrl: 'http://devv64.pythonanywhere.com/static/images/sageGiraffeReading.png',
-      tag: 'Flask',
-      link: 'http://devv64.pythonanywhere.com/',
+      imageUrl: liquorBG,
+      tag: 'React',
+      link: 'https://devv64.github.io/allstarsite/',
       videoUrl: '',
     },
   ];
