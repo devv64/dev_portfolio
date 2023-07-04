@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = (event: React.MouseEvent) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
   };
 
@@ -36,12 +36,10 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
       handleClickOutside(event);
     };
 
-    containerRef.current?.addEventListener('click', handleClickOutside);
-    window.addEventListener('click', handleWindowClick);
+    document.addEventListener('click', handleWindowClick);
 
     return () => {
-      containerRef.current?.removeEventListener('click', handleClickOutside);
-      window.removeEventListener('click', handleWindowClick);
+      document.removeEventListener('click', handleWindowClick);
     };
   }, []);
 
@@ -49,7 +47,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
     <div id="container" ref={containerRef}>
       <nav className="fixed top-0 left-0 right-0 bg-[#00A6FB] p-4 rounded-lg mt-6 mx-4 flex justify-between items-center h-16 shadow-lg z-50">
         <a
-          href="/"
+          href="#"
           className="rounded-lg bg-[#001427] px-4 py-2 transition-all duration-300 hover:bg-[#0054A2] hover:scale-105 cursor-pointer"
         >
           <div className="text-[#DBDFAC] text-xl">{title}</div>

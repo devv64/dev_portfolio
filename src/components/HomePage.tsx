@@ -9,7 +9,7 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
-  const typingDelay = 250; // Delay between each character typing
+  const typingDelay = 250;
 
   let charIndex = 0;
 
