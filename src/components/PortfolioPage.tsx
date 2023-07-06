@@ -59,7 +59,7 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       title: 'Weather App',
       shortdesc: 'A blog site built with Next.js and Tailwind CSS',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      imageUrl: 'https://assets2.cbsnewsstatic.com/hub/i/r/2023/03/15/749d5e5c-e9bd-43bd-a4c0-682b6e7b2ce3/thumbnail/640x360/dfde84421bdc52d56b818dddb1b06d4b/image009.png?v=f3503a7856c58c20acab4eae8bb1f0f4',
+      imageUrl: 'https://media.psg.nexstardigital.net/kswb/weather/7daycoastal.jpg',
       tag: 'Flask',
       link: 'https://devv64.github.io/weatherApp2/',
       videoUrl: '',

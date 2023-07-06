@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { IoMdArrowDropright } from 'react-icons/io';
 import Masonry from 'react-masonry-css';
+import './PortfolioCard.css';
 
 interface PortfolioItem {
   videoUrl: any;
@@ -12,21 +13,41 @@ interface PortfolioItem {
   shortdesc: string;
 }
 
-interface PortfolioCardProps {
-  items: PortfolioItem[];
-}
-
 interface ExpandedCardProps {
   item: PortfolioItem;
   onClose: () => void;
 }
 
-
 const ExpandedCard: React.FC<ExpandedCardProps> = ({ item, onClose }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
+        onClose();
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [onClose]);
+
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-80">
-      <div className="max-w-lg w-full p-8 bg-white rounded-lg">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-4">{item.title}</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-80" onClick={onClose}>
+      <div className="max-w-lg w-full p-8 bg-white rounded-lg" onClick={(event) => event.stopPropagation()}>
+        <h3 className="text-2xl font-semibold text-[#00A6FB] mb-4">{item.title}</h3>
         <div className="flex justify-between mb-4">
           <img
             src={item.imageUrl}
@@ -34,13 +55,18 @@ const ExpandedCard: React.FC<ExpandedCardProps> = ({ item, onClose }) => {
             className="h-32 w-32 object-cover rounded-lg"
           />
           <div className="ml-4">
-            <p className="text-gray-600">
+            {/* <p className="text-gray-600">
               <span className="font-semibold">Tag: </span>
               {item.tag}
-            </p>
+            </p> */}
             <p className="text-gray-600">
-              <span className="font-semibold">Link: </span>
-              <a href={item.link} className="text-blue-500 hover:underline">
+              {/* <span className="font-semibold">Link: </span> */}
+              <a
+                href={item.link}
+                className="text-blue-500 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {item.link}
               </a>
             </p>
@@ -57,7 +83,7 @@ const ExpandedCard: React.FC<ExpandedCardProps> = ({ item, onClose }) => {
         )}
         <div className="flex justify-end mt-6">
           <button
-            className="text-gray-500 hover:text-gray-700"
+            className="text-white hover:scale-105 bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md transition-colors duration-300"
             onClick={onClose}
           >
             Close
@@ -68,7 +94,9 @@ const ExpandedCard: React.FC<ExpandedCardProps> = ({ item, onClose }) => {
   );
 };
 
-
+interface PortfolioCardProps {
+  items: PortfolioItem[];
+}
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ items }) => {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
@@ -102,13 +130,13 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ items }) => {
                     className="h-[18rem] w-full object-cover rounded-lg"
                   />
                   <div className="absolute top-0 left-0 p-2">
-                    <h3 className="text-sm ml-1">{item.title}</h3>
+                  <h3 className="text-lg ml-1">
+                    <span className="text-stroke">{item.title}</span>
+                  </h3>
                   </div>
-                  <a href={item.link} className="absolute top-1.5 right-1.5">
-                    <p className="text-white bg-[#00A6FB] rounded-lg px-2 py-0.5 text-xs">
-                      {item.tag}
-                    </p>
-                  </a>
+                  <p className="absolute top-1.5 right-1.5 text-white bg-[#00A6FB] rounded-lg px-2 py-0.5 text-sm">
+                    {item.tag}
+                  </p>
                   <a
                     className="absolute inset-0 flex items-center justify-center bg-black opacity-0 hover:opacity-80 transition-opacity duration-300 rounded-lg"
                   >

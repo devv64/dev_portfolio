@@ -1,0 +1,9 @@
+.text-stroke {
+    color: #1eb4ff;
+    text-shadow:
+      -1px -1px 0 #2b2b2b,
+      1px -1px 0 #2b2b2b,
+      -1px 1px 0 #2b2b2b,
+      1px 1px 0 #2b2b2b;
+  }
+  
