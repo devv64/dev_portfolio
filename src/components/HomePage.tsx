@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import './HomePage.css';
 
 interface HomePageProps {
@@ -6,7 +7,6 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
   const typingDelay = 250;
@@ -27,16 +27,16 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
     }
   };
 
+  const scrollToPortfolio = () => {
+    if (portfolioRef.current) {
+      const { top } = portfolioRef.current.getBoundingClientRect();
+      window.scrollTo({ top: window.pageYOffset + top, behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     type();
   }, []);
-
-  const scrollDown = () => {
-    window.scrollTo({ 
-      top: portfolioRef.current?.offsetTop, 
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <section className="homepage-section">
@@ -46,9 +46,9 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
           <p className="homepage-description">
             I'm a passionate developer ready to take on new challenges and create amazing web experiences.
           </p>
-          <button ref={buttonRef} className="homepage-button" onClick={scrollDown}>
+          <Link to="portfolio" smooth={true} duration={500} className="homepage-button" onClick={scrollToPortfolio}>
             View Portfolio
-          </button>
+          </Link>
         </div>
       </div>
     </section>

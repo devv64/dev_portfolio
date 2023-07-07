@@ -6,12 +6,6 @@ import About from './components/About';
 import { Element } from 'react-scroll';
 
 const App: React.FC = () => {
-  const links = [
-    { title: 'Portfolio', url: '/portfolio' },
-    { title: 'About', url: '/about' },
-    { title: 'Contact', url: '/contact' },
-  ];
-
   const ref = useRef<HTMLDivElement>(null);
 
   return (
