@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import axios from 'axios';
-import LASTFM_API_KEY from './config';
 import './About.css';
+import LASTFM_API_KEY from './config';
 
 declare global {
   interface Window {
@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
     try {
       const response = await axios.get(
         `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=devv64&api_key=${LASTFM_API_KEY}&format=json&limit=5`
-      );
+      );      
       const tracks: PlayHistoryObject[] = response.data.recenttracks.track;
       const updatedTracks: PlayHistoryObject[] = [];
 
