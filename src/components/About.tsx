@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
     try {
       const response = await axios.get(
         `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=devv64&api_key=${LASTFM_API_KEY}&format=json&limit=5`
-      );      
+      );
       const tracks: PlayHistoryObject[] = response.data.recenttracks.track;
       const updatedTracks: PlayHistoryObject[] = [];
 
@@ -87,12 +87,12 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
       };
       document.head.appendChild(script);
     };
-  
+
     loadLinkedInSDK();
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#001427] overflow-x-hidden">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#001427] overflow-x-hidden pt-36">
       <div ref={ref} className="flex items-center bg-[#81d5ff] rounded-lg p-6">
         <div className="relative w-1/3 flex justify-center">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply"></div>
@@ -147,24 +147,21 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
                   </div>
                 </div>
               </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
-        {/* Social Badges */}
-        <div className="linkedin-badge-container">
-          <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="dev-patel-323017221" data-version="v1"></div>
-        </div>
-        <div className="github-badge-container">
-          <a href="https://github.com/devv64" target="_blank" rel="noopener noreferrer">
-            {/* https://github.com/Ashutosh00710/github-readme-activity-graph look here to choose theme later */}
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=devv64&theme=github" alt="GitHub Activity Graph" />
-          </a>
-        </div>
-
-
-
       </div>
+      {/* Social Badges */}
+      <div className="linkedin-badge-container mt-8">
+        <div className="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="dev-patel-323017221" data-version="v1"></div>
+      </div>
+      <div className="github-badge-container mt-8">
+        <a href="https://github.com/devv64" target="_blank" rel="noopener noreferrer">
+          {/* https://github.com/Ashutosh00710/github-readme-activity-graph look here to choose theme later */}
+          <img src="https://github-readme-activity-graph.vercel.app/graph?username=devv64&theme=github" alt="GitHub Activity Graph" />
+        </a>
+      </div>
+    </div>
   );
 };
 

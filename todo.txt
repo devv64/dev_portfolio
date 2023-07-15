@@ -25,4 +25,19 @@ portfolio projects:
     --> WiseQuackers
     --> InternTrack (in progress)
     --> Maybe tiling the courtyard with video demo
-    
+
+currently all on one page
+two potential different pages:
+
+contact:
+    basics:
+        --> email
+        --> linkedin
+        --> github
+        --> discord
+    creative:
+        --> calendar type thing to schedule a meeting
+
+fun:
+    concept: page that has lots of fun (engaging) things to do
+    ex: https://neal.fun/
