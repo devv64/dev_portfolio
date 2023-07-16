@@ -37,14 +37,14 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
   const fetchRecentlyPlayed = async () => {
     try {
       const response = await axios.get(
-        `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=devv64&api_key=${LASTFM_API_KEY}&format=json&limit=5`
+        `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=devv64&api_key=${LASTFM_API_KEY}&format=json&limit=5`
       );
       const tracks: PlayHistoryObject[] = response.data.recenttracks.track;
       const updatedTracks: PlayHistoryObject[] = [];
 
       for (const track of tracks) {
         const trackInfoResponse = await axios.get(
-          `http://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${LASTFM_API_KEY}&artist=${encodeURIComponent(
+          `https://ws.audioscrobbler.com/2.0/?method=track.getInfo&api_key=${LASTFM_API_KEY}&artist=${encodeURIComponent(
             track.artist['#text']
           )}&track=${encodeURIComponent(track.name)}&format=json`
         );
