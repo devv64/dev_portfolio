@@ -22,5 +22,5 @@
   },
   "include": [
     "src", "public", "**/*.mp4"
-  ]
+, "src/fun/FunPage.tsx"  ]
 }

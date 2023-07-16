@@ -29,6 +29,7 @@ portfolio projects:
 currently all on one page
 two potential different pages:
 
+* maybe contact should be on the original page
 contact:
     basics:
         --> email
@@ -41,3 +42,12 @@ contact:
 fun:
     concept: page that has lots of fun (engaging) things to do
     ex: https://neal.fun/
+    ex: https://www.boredbutton.com/
+    ex: https://www.koalastothemax.com/
+    ex: https://theuselessweb.com/
+    ex: https://pointerpointer.com/
+    ex: https://www.fallingfalling.com/
+
+    ** could be better to have this as a separate deployment
+    this is getting too much for a portfolio site
+    
