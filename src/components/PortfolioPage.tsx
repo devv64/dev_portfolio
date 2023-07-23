@@ -73,6 +73,16 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       link: 'https://devv64.github.io/allstarsite/',
       videoUrl: '',
     },
+    {
+      title: 'Dev\'s Fun Site',
+      shortdesc: 'A fun website made to cure boredom',
+      description: 'This website was created to cure boredom. It features a bunch of fun games and activities to do when you\'re bored. This project started when I saw a cool effect on a website and I tried to replicate it. I liked the way it turned out but I didn\'t have anywhere to put it. So I decided to make a website with a bunch of fun things to do. I added a bunch of games and activities that I thought were fun. I also added a bunch of cool effects that I found on the internet. This was a fun project that I worked on in my free time.',
+      imageUrl: liquorBG,
+      tag: 'Javascript',
+      link: 'https://devv64.github.io/dev-fun/',
+      videoUrl: '',
+    },
+
   ];
 
   return (
