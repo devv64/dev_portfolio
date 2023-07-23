@@ -50,4 +50,9 @@ fun:
 
     ** could be better to have this as a separate deployment
     this is getting too much for a portfolio site
-    
+
+
+--> idea: add a page that has my resume but requires a fun puzzle to be solved before accessing
+    maybe a puzzle that requires knowledge of my projects
+    maybe a puzzle that requires knowledge of my interests
+    ex: chess, geoguessr, etc
