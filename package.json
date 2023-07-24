@@ -13,7 +13,9 @@
     "@types/react-dom": "^18.2.5",
     "axios": "^1.4.0",
     "framer-motion": "^10.12.18",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-calendar-timeline": "^0.28.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-intersection-observer": "^9.5.2",
@@ -23,6 +25,7 @@
     "react-scroll": "^1.8.9",
     "react-spring": "^9.7.2",
     "react-transition-group": "^4.4.5",
+    "react-vertical-timeline-component": "^3.6.0",
     "spotify-web-api-js": "^1.5.2",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.9.5",
@@ -55,8 +58,10 @@
     ]
   },
   "devDependencies": {
+    "@types/react-calendar-timeline": "^0.28.2",
     "@types/react-scroll": "^1.8.7",
     "@types/react-transition-group": "^4.4.6",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/styled-components": "^5.1.26",
     "gh-pages": "^5.0.0",
     "styled-components": "^5.3.10"

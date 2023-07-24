@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaCss3Alt, FaNodeJs, FaPython, FaJs } from 'react-icons/fa'; // Import font awesome icons
-
-
+import { FaReact, FaNodeJs, FaPython, FaJs } from 'react-icons/fa';
 
 interface SkillItem {
   name: string;
-  description?: string; // Make description optional
+  description?: string;
   icon: JSX.Element;
   proficiency: number;
   color: string;
@@ -50,7 +48,6 @@ const SkillsPage: React.FC = () => {
           proficiency: 85,
           color: 'bg-red-100',
         },
-        // Add more language skills here...
       ],
     },
     {
@@ -84,7 +81,6 @@ const SkillsPage: React.FC = () => {
           proficiency: 90,
           color: 'bg-blue-100',
         },
-        // Add more web development technologies here...
       ],
     },
     {
@@ -118,13 +114,12 @@ const SkillsPage: React.FC = () => {
           proficiency: 85,
           color: 'bg-indigo-100',
         },
-        // Add more other tools and skills here...
       ],
     },
   ];
 
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto p-8 overflow-x-hidden">
       <h1 className="text-5xl font-bold mb-8 mt-16 text-[#DBDFAC]">Skills</h1>
 
       {skills.map((category) => (
@@ -138,16 +133,15 @@ const SkillsPage: React.FC = () => {
                 className={`p-8 rounded-lg shadow-md ${skill.color} skill-card`}
                 whileHover={{ y: -10, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)' }}
               >
-                {/* Animate the skill icon */}
                 <motion.div
                   className="flex items-center justify-center mb-4"
-                  whileHover={{ scale: 1.1 }} // Scale up on hover
+                  whileHover={{ scale: 1.1 }}
                 >
                   {skill.icon}
                 </motion.div>
                 <motion.h2
                   className="text-2xl font-bold mb-2"
-                  whileHover={{ scale: 1.1 }} // Scale up on hover
+                  whileHover={{ scale: 1.1 }}
                 >
                   {skill.name}
                 </motion.h2>
@@ -162,7 +156,7 @@ const SkillsPage: React.FC = () => {
                 </div>
                 <motion.p
                   className="mt-2 text-sm text-gray-600"
-                  whileHover={{ scale: 1.1 }} // Scale up on hover
+                  whileHover={{ scale: 1.1 }}
                 >
                   Proficiency: {skill.proficiency}%
                 </motion.p>

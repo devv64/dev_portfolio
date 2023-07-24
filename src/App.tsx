@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
 import About from './components/About';
 import SkillsPage from './components/Skills';
+import ExperienceTimeline from './components/Experiences';
 import { Element } from 'react-scroll';
 
 const App: React.FC = () => {
@@ -32,6 +33,9 @@ const App: React.FC = () => {
                 </Element>
                 <Element name="skills" className="element">
                   <SkillsPage />
+                </Element>
+                <Element name="experience" className="element">
+                  <ExperienceTimeline />
                 </Element>
               </>
             }
