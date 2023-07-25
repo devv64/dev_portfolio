@@ -26,7 +26,7 @@ const experiences: Experience[] = [
     company: 'Omnidya',
     duration: 'Dec 2022 - Present',
     description:
-      'Managed and guided a team of interns in executing several data analysis campaigns focused on marketing objectives. Developed a data visualization tool for tracking and analyzing weather conditions and accidents in multiple states. Implemented data preprocessing techniques for accuracy. Utilized data visualization libraries (Pandas, Matplotlib, Seaborn) to generate comprehensive graphs. Optimized code for scalability, readability, and maintainability. Developed an optimized seatbelt detection model specifically designed for mobile devices, leveraging computer vision and machine learning techniques [ONGOING].',
+      'Managed and guided a team of interns in executing several data analysis campaigns focused on marketing objectives. Developed a data visualization tool for tracking and analyzing weather conditions and accidents in multiple states. Implemented data preprocessing techniques for accuracy. Utilized data visualization libraries (Pandas, Matplotlib, Seaborn) to generate comprehensive graphs. Optimized code for scalability, readability, and maintainability. Developed an optimized seatbelt detection model specifically designed for mobile devices, leveraging computer vision and machine learning techniques.',
     image: 'https://image.pitchbook.com/1ZEW09DxtEjhKRX3dv4KUtvEdhm1660214552319_200x200',
   },
   {
@@ -81,7 +81,7 @@ const ExperienceTimeline = () => {
                 </div>
               }
             >
-              <div className="p-4"> {/* Apply a background color and shadow to the content */}
+              <div>
                 <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
                 <h4 className="text-lg font-medium mb-4">{experience.company}</h4>
                 <p className="text-gray-700">{experience.description}</p>
