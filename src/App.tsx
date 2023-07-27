@@ -31,9 +31,9 @@ const App: React.FC = () => {
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis, elit consectetur gravida feugiat, dui erat fringilla nulla, sed tincidunt est ex ac ligula. Sed pretium orci sed egestas laoreet. Cras consectetur eros quis nulla sagittis, at porta ante porttitor. Maecenas commodo turpis vel vestibulum tincidunt. Aenean leo nibh, tristique interdum facilisis at, tristique nec nulla. Etiam hendrerit mi eu purus iaculis, vitae consequat nibh laoreet. Ut id nulla ipsum. Donec suscipit luctus augue, et suscipit elit scelerisque a. Nam non turpis a lacus gravida euismod. Ut eget augue nec est pretium venenatis. Vivamus enim nisl, hendrerit eget rhoncus ac, posuere vel dolor. Suspendisse quis accumsan massa, a pulvinar tortor. Cras et pulvinar turpis."
                   />
                 </Element>
-                <Element name="skills" className="element">
+                {/* <Element name="skills" className="element">
                   <SkillsPage />
-                </Element>
+                </Element> */}
                 <Element name="experience" className="element">
                   <ExperienceTimeline />
                 </Element>
