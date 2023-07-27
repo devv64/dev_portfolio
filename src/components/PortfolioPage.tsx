@@ -7,7 +7,6 @@ import stevensCampus from '../assets/stevensCampus.png'
 import ShuPU from '../assets/ShuPU.png'
 import liquorBG from '../assets/liquorBG.jpg'
 
-// const PortfolioPage: React.FC = () => {
 const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
   const portfolioItems = [
     {
