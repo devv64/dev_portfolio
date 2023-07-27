@@ -1,9 +1,10 @@
 import React, { forwardRef } from 'react';
 import PortfolioCard from './PortfolioCard';
-import CMS from '../assets/CMS.png'
-import blog from '../assets/blog.jpg'
-import splitit from '../assets/splitit.png'
-import stevensCampus from '../assets/stevensCampus.png'
+import CMS from '../assets/SGCMS.png'
+import blog from '../assets/BLOGS.png'
+import splitit from '../assets/SPLIT.png'
+import stevensCampus from '../assets/WISE.png'
+import weather from '../assets/WEATHER.png'
 import ShuPU from '../assets/ShuPU.png'
 import liquorBG from '../assets/liquorBG.jpg'
 
@@ -58,7 +59,7 @@ const PortfolioPage = forwardRef<HTMLDivElement>((props, ref) => {
       title: 'Weather App',
       shortdesc: 'A website created to display the weather in different cities',
       description: ' This website was created to display the weather in different cities. It features a search bar that allows users to search for a city and view its current weather. The background image also changes depending on which city you searched for. The website was built with HTML, CSS, and JavaScript. This was one of my earlier projects and it taught me a lot about how to use APIs. I learned how to use the OpenWeatherMap API to get the weather data and how to use the Unsplash API to get the background image.',
-      imageUrl: 'https://media.psg.nexstardigital.net/kswb/weather/7daycoastal.jpg',
+      imageUrl: weather,
       tag: 'JavaScript',
       link: 'https://devv64.github.io/weatherApp2/',
       videoUrl: '',

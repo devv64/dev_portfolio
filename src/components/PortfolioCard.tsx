@@ -127,7 +127,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ items }) => {
                   <img
                     src={item.imageUrl}
                     alt={item.title}
-                    className="h-[18rem] w-full object-cover rounded-lg"
+                    className="h-[18rem] w-full object-fit rounded-lg"
                   />
                   <div className="absolute top-0 left-0 p-2">
                   <h3 className="text-lg ml-1">
