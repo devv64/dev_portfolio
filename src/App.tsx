@@ -28,7 +28,7 @@ const App: React.FC = () => {
                   <About
                     imageSrc="https://media.gettyimages.com/id/685132245/photo/mature-businessman-smiling-over-white-background.jpg?s=612x612&w=gi&k=20&c=ELBLmT-KQ6vhI5xiWnQcWWw0QJiELKt6STlga4fwRC8="
                     title="About Me"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis, elit consectetur gravida feugiat, dui erat fringilla nulla, sed tincidunt est ex ac ligula. Sed pretium orci sed egestas laoreet. Cras consectetur eros quis nulla sagittis, at porta ante porttitor. Maecenas commodo turpis vel vestibulum tincidunt. Aenean leo nibh, tristique interdum facilisis at, tristique nec nulla. Etiam hendrerit mi eu purus iaculis, vitae consequat nibh laoreet. Ut id nulla ipsum. Donec suscipit luctus augue, et suscipit elit scelerisque a. Nam non turpis a lacus gravida euismod. Ut eget augue nec est pretium venenatis. Vivamus enim nisl, hendrerit eget rhoncus ac, posuere vel dolor. Suspendisse quis accumsan massa, a pulvinar tortor. Cras et pulvinar turpis."
+                    description="Hey there, I'm Dev Patel – a tech enthusiast, problem solver, and creative thinker. With an insatiable curiosity and a love for building, I'm on a journey to merge my passion for technology with my knack for innovation. Whether it's crafting elegant code or finding beauty in data, I thrive on the thrill of turning ideas into tangible solutions. Beyond the keyboard, you'll often find me watching NBA games, playing chess, or playing poker. Don't hesitate to get in touch – I'm looking forward to connecting with like-minded individuals!"
                   />
                 </Element>
                 {/* <Element name="skills" className="element">

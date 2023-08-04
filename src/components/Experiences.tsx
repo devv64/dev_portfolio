@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import backgroundImage from './layered-waves-flipped.svg';
 
 interface Experience {
   id: number;
@@ -58,12 +59,19 @@ const experiences: Experience[] = [
 
 const ExperienceTimeline = () => {
     return (
-      <div className="container mx-auto p-8">
-        <h1 className="text-5xl font-bold mb-8 mt-16 text-[#DBDFAC]">Experience</h1>
-  
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <VerticalTimelineElement
+      <div className="pt-36"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}>
+        <div className="container mx-auto p-8">
+          <h1 className="text-5xl font-bold mb-8 mt-16 text-[#DBDFAC]">Experience</h1>
+    
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <VerticalTimelineElement
               key={experience.id}
               className={`vertical-timeline-element${index % 2 === 0 ? '' : ' vertical-timeline-element-reverse'}`}
               date={experience.duration}
@@ -77,18 +85,19 @@ const ExperienceTimeline = () => {
               dateClassName='text-[#fbffd4]'
               icon={
                 <div className="w-16 h-16 rounded-full overflow-hidden">
-                  <img src={experience.image} alt={experience.title} className="object-fill w-full h-full" />
+                    <img src={experience.image} alt={experience.title} className="object-fill w-full h-full" />
+                  </div>
+                }
+                >
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
+                  <h4 className="text-lg font-medium mb-4">{experience.company}</h4>
+                  <p className="text-gray-700">{experience.description}</p>
                 </div>
-              }
-            >
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{experience.title}</h3>
-                <h4 className="text-lg font-medium mb-4">{experience.company}</h4>
-                <p className="text-gray-700">{experience.description}</p>
-              </div>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     );
   };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import './About.css';
+import backgroundImage from './layered-waves-haikei.svg';
 
 interface AboutProps {
   imageSrc: string;
@@ -21,10 +21,17 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#001427] overflow-x-hidden pt-36">
+    <div 
+    className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden pt-80"
+    style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}>
       <div ref={ref} className="flex items-center bg-[#81d5ff] rounded-lg p-6">
         <div className="relative w-1/3 flex justify-center">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply"></div>
+          <div className="absolute top-0 left-4/12 w-4/6 h-full bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply"></div>
           <div className="rounded-full w-40 h-40 relative overflow-hidden">
             <motion.img
               src={imageSrc}
@@ -41,7 +48,7 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
           <h2 className="text-4xl font-bold text-gray-800 mb-6 leading-tight whitespace-normal">
             {title}
           </h2>
-          <p className="text-gray-600 leading-relaxed whitespace-normal">
+          <p className="text-gray-600 text-lg leading-relaxed whitespace-normal">
             {description}
           </p>
           <div className="mt-8">
