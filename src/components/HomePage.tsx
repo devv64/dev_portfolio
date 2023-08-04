@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import './HomePage.css';
 
@@ -7,7 +7,10 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [roles, setRoles] = useState<string[]>(['Software Engineer', 'Student', 'Problem Solver', 'Entrepreneur', 'Creative']);
+
+  const titleRef = React.useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
   const typingDelay = 250;
 
@@ -36,17 +39,29 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
 
   useEffect(() => {
     type();
-  }, []);
+
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [roles.length]);
 
   return (
     <section className="homepage-section">
       <div className="homepage-container">
         <div className="homepage-content mt-16">
           <h1 ref={titleRef} className="homepage-title"></h1>
-          <p className="homepage-description">
-            I'm a passionate developer ready to take on new challenges and create amazing web experiences.
-          </p>
-          <Link to="portfolio" smooth={true} duration={500} className="homepage-button" onClick={scrollToPortfolio}>
+          <div className="homepage-description side flex">
+            <h2 className="title">{roles[currentRoleIndex]}</h2>
+          </div>
+          <Link
+            to="portfolio"
+            smooth={true}
+            duration={500}
+            className="homepage-button"
+            onClick={scrollToPortfolio}
+          >
             View Portfolio
           </Link>
         </div>
