@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import './HomePage.css';
+import PIC1 from './../assets/pic1.jpg';
+import SPLIT from './../assets/SPLIT.png';
+import CMS from './../assets/CMS.png';
+import BLOGS from './../assets/BLOGS.png';
 
 interface HomePageProps {
   portfolioRef: React.RefObject<HTMLDivElement>;
@@ -10,6 +14,7 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [roles, setRoles] = useState<string[]>(['Software Engineer', 'Student', 'Problem Solver', 'Entrepreneur']);
   const [isTypingFinished, setIsTypingFinished] = useState(false);
+  const [roleImages, setRoleImages] = useState<string[]>([PIC1, SPLIT, CMS, BLOGS]);
 
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
@@ -47,8 +52,8 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   useEffect(() => {
     if (isTypingFinished) {
       const interval = setInterval(() => {
-        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-      }, 3000);
+        setCurrentRoleIndex(prevIndex => (prevIndex + 1) % roles.length);
+      }, 5000);
 
       return () => clearInterval(interval);
     }
@@ -60,9 +65,23 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
         <div className="homepage-content mt-16">
           <h1 ref={titleRef} className="homepage-title"></h1>
           {isTypingFinished && (
-            <div className="homepage-description side flex">
-              <h2 className="title">{roles[currentRoleIndex]}</h2>
-            </div>
+            <>
+              <div className="homepage-description side flex">
+                <h2 className={`title ${currentRoleIndex === currentRoleIndex ? 'active' : ''}`}>
+                  {roles[currentRoleIndex]}
+                </h2>
+              </div>
+              <div className="homepage-images">
+                {roleImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${roles[index]}`}
+                    className={`role-image ${index === currentRoleIndex ? 'active' : ''}`}
+                  />
+                ))}
+              </div>
+            </>
           )}
           <Link
             to="portfolio"
