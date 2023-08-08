@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { SVGProps } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { FaBasketballBall, FaChess } from 'react-icons/fa';
 import { CgCardSpades } from 'react-icons/cg';
 import backgroundImage from './layered-waves-haikei.svg';
+
+import KUTE from 'kute.js';
+// import Blob1Path from './blob-haikei.svg';
+// import Blob2Path from './blob-haikei-2.svg';
+import { useSpring, animated } from 'react-spring'
+
 
 interface AboutProps {
   imageSrc: string;
@@ -22,9 +28,20 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
     visible: { opacity: 1 },
   };
 
+  const blob1 = "M148.3 -172.6C177 -152.6 174.7 -91.5 173.5 -39.3C172.3 12.9 172.3 56.2 160.7 108.3C149.1 160.3 125.9 221.1 82.3 245.2C38.8 269.4 -25.1 256.8 -74.9 228.8C-124.8 200.7 -160.7 157.1 -178.9 110.6C-197 64 -197.5 14.6 -192.5 -37.4C-187.5 -89.4 -177 -143.9 -144 -163.1C-111 -182.3 -55.5 -166.1 2.1 -168.7C59.8 -171.2 119.6 -192.5 148.3 -172.6"
+  const blob2 = "M117.8 -129.5C158 -106.6 199.6 -74.6 214.3 -31.8C229 11 216.7 64.5 188.9 105.7C161.1 147 117.8 175.9 75.2 179.7C32.6 183.6 -9.4 162.3 -65.1 153.1C-120.8 144 -190.3 147 -228.7 115.2C-267.1 83.4 -274.4 16.9 -258 -40.2C-241.5 -97.2 -201.4 -144.7 -154.5 -166.5C-107.6 -188.2 -53.8 -184.1 -7.5 -175.2C38.8 -166.2 77.6 -152.4 117.8 -129.5"
+
+  const blobAnimation = useSpring({
+    from: { x: blob1 },
+    to: { x: blob2 },
+    config: { duration: 3000 },
+    loop: { reverse: true },
+  });
+  
+
   return (
     <div 
-    className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden pt-80"
+    className="flex flex-col items-center justify-center min-h-screen overflow-hidden pt-80"
     style={{
       backgroundImage: `url(${backgroundImage})`,
       backgroundSize: 'cover',
@@ -33,7 +50,8 @@ const About: React.FC<AboutProps> = ({ imageSrc, title, description }) => {
     }}>
       <div ref={ref} className="flex items-center bg-[#81d5ff] rounded-lg p-6">
         <div className="relative w-1/3 flex justify-center">
-          <div className="absolute top-0 left-4/12 w-4/6 h-full bg-gradient-to-br border-2 border-black from-blue-500 to-blue-100 rounded-full mix-blend-multiply"></div>
+          {/* <div className="absolute top-0 left-4/12 w-4/6 h-full bg-gradient-to-br border-2 border-black from-blue-500 to-blue-100 rounded-full mix-blend-multiply"></div> */}
+          <svg className="absolute pb-72 -bottom-96"  id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(460.5532557363372 261.4922545353779)"><animated.path id="blob1" d={blobAnimation.x} fill="#004b90" /></g></svg>
           <div className="rounded-full w-40 h-40 relative overflow-hidden">
             <motion.img
               src={imageSrc}
