@@ -7,6 +7,7 @@ import About from './components/About';
 import SkillsPage from './components/Skills';
 import ExperienceTimeline from './components/Experiences';
 import { Element } from 'react-scroll';
+import pic1 from './assets/pic1.jpg';
 
 const App: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,7 +27,7 @@ const App: React.FC = () => {
                 </Element>
                 <Element name="about" className="element">
                   <About
-                    imageSrc="https://media.gettyimages.com/id/685132245/photo/mature-businessman-smiling-over-white-background.jpg?s=612x612&w=gi&k=20&c=ELBLmT-KQ6vhI5xiWnQcWWw0QJiELKt6STlga4fwRC8="
+                    imageSrc={pic1}
                     title="About Me"
                     description="Hey there, I'm Dev Patel – a tech enthusiast, problem solver, and creative thinker. With an insatiable curiosity and a love for building, I'm on a journey to merge my passion for technology with my knack for innovation. Whether it's crafting elegant code or finding beauty in data, I thrive on the thrill of turning ideas into tangible solutions. Beyond the keyboard, you'll often find me watching NBA games, playing chess, or playing poker. Don't hesitate to get in touch – I'm looking forward to connecting with like-minded individuals!"
                   />
