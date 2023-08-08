@@ -8,7 +8,7 @@ interface HomePageProps {
 
 const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [roles, setRoles] = useState<string[]>(['Software Engineer', 'Student', 'Problem Solver', 'Entrepreneur', 'Creative']);
+  const [roles, setRoles] = useState<string[]>(['Software Engineer', 'Student', 'Problem Solver', 'Entrepreneur']);
   const [isTypingFinished, setIsTypingFinished] = useState(false);
 
   const titleRef = React.useRef<HTMLHeadingElement>(null);
