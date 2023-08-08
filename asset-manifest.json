@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dev_portfolio/static/css/main.cc1bb869.css",
-    "main.js": "/dev_portfolio/static/js/main.abf0b9fb.js",
+    "main.css": "/dev_portfolio/static/css/main.e58ea2a1.css",
+    "main.js": "/dev_portfolio/static/js/main.e822e2d0.js",
     "static/media/WEATHER.png": "/dev_portfolio/static/media/WEATHER.eeccaae3d0a3da5742ea.png",
     "static/media/BLOGS.png": "/dev_portfolio/static/media/BLOGS.15a485d8dd5dc2a1a9c3.png",
     "static/media/WISE.png": "/dev_portfolio/static/media/WISE.93d4f61fcb905c25d09e.png",
@@ -10,12 +10,14 @@
     "static/media/ShuPU.png": "/dev_portfolio/static/media/ShuPU.70701799b25d3c7fabe4.png",
     "static/media/liquorBG.jpg": "/dev_portfolio/static/media/liquorBG.db48ac5f278ca1d64cfd.jpg",
     "static/media/Quicksand-Bold.ttf": "/dev_portfolio/static/media/Quicksand-Bold.a0a11318dd0b528da77d.ttf",
+    "static/media/layered-waves-haikei.svg": "/dev_portfolio/static/media/layered-waves-haikei.8781f19ee41b98b533bf660a55562095.svg",
+    "static/media/layered-waves-flipped.svg": "/dev_portfolio/static/media/layered-waves-flipped.4799197e6535476cbe13ba031625e57e.svg",
     "index.html": "/dev_portfolio/index.html",
-    "main.cc1bb869.css.map": "/dev_portfolio/static/css/main.cc1bb869.css.map",
-    "main.abf0b9fb.js.map": "/dev_portfolio/static/js/main.abf0b9fb.js.map"
+    "main.e58ea2a1.css.map": "/dev_portfolio/static/css/main.e58ea2a1.css.map",
+    "main.e822e2d0.js.map": "/dev_portfolio/static/js/main.e822e2d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc1bb869.css",
-    "static/js/main.abf0b9fb.js"
+    "static/css/main.e58ea2a1.css",
+    "static/js/main.e822e2d0.js"
   ]
 }
