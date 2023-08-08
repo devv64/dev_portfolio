@@ -9,6 +9,7 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [roles, setRoles] = useState<string[]>(['Software Engineer', 'Student', 'Problem Solver', 'Entrepreneur', 'Creative']);
+  const [isTypingFinished, setIsTypingFinished] = useState(false);
 
   const titleRef = React.useRef<HTMLHeadingElement>(null);
   const name = 'Dev Patel.';
@@ -26,6 +27,8 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
 
       if (charIndex <= name.length) {
         setTimeout(type, typingDelay);
+      } else {
+        setIsTypingFinished(true);
       }
     }
   };
@@ -39,22 +42,28 @@ const HomePage: React.FC<HomePageProps> = ({ portfolioRef }) => {
 
   useEffect(() => {
     type();
+  }, []);
 
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 5000);
+  useEffect(() => {
+    if (isTypingFinished) {
+      const interval = setInterval(() => {
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      }, 3000);
 
-    return () => clearInterval(interval);
-  }, [roles.length]);
+      return () => clearInterval(interval);
+    }
+  }, [isTypingFinished, roles.length]);
 
   return (
     <section className="homepage-section">
       <div className="homepage-container">
         <div className="homepage-content mt-16">
           <h1 ref={titleRef} className="homepage-title"></h1>
-          <div className="homepage-description side flex">
-            <h2 className="title">{roles[currentRoleIndex]}</h2>
-          </div>
+          {isTypingFinished && (
+            <div className="homepage-description side flex">
+              <h2 className="title">{roles[currentRoleIndex]}</h2>
+            </div>
+          )}
           <Link
             to="portfolio"
             smooth={true}

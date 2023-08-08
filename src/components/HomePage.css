@@ -78,8 +78,8 @@
   }
   
   .homepage-description h2.title {
-    position: relative;
+    position: absolute;
     opacity: 0;
-    animation: fadeInOut 5s infinite; /* 5 seconds for each role */
+    animation: fadeInOut 3s infinite;
   }
   
